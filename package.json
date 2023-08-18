@@ -1,0 +1,14 @@
+{
+  "name": "dsa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "arrays/array.js",
+  "scripts": {
+    "start": "nodemon arrays/array.js"
+  },
+  "author": "Oluwaseun Odueso",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
