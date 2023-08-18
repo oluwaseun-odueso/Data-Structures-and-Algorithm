@@ -1,4 +1,4 @@
-// Creating new arrays from existing arrays
+// CREATING NEW ARRAYS FROM EXISTING ARRAYS
 var cisDept = ['Mike', 'Clayton', 'Terrill', 'Danny', 'Jennifer']
 var dmpDept = ['Raymoond', 'Cynthia', 'Bryan']
 var ltDiv = cisDept.concat(dmpDept)
@@ -12,7 +12,7 @@ nums.splice(3, 0, 4, 5, 6, 7, 8, 9);
 var nums = [1, 2, 3, 100, 200, 300, 400, 4, 5];
 nums.splice(3, 4);
 
-// Putting array elemets in order
+// PUTTING ARRAY ELEMENTS IN ORDER
 // reverse()
 var nums = [1, 2, 3, 4, 5];
 nums.reverse();
@@ -32,3 +32,27 @@ function compare(num1, num2) {
 var nums = [3, 1, 2, 100, 4, 200];
 nums.sort(compare)
 
+// ITERATOR FUNCTIONS
+// Non-array generating iterator functions
+// forEach ()
+
+function square(num) {
+   console.log (num * num)
+}
+var nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// Cannot be assigned to a variable, doesn't change the original array
+nums.forEach(square)
+
+// every()
+function isEven(num) {
+   return num % 2 == 0;
+};
+
+var nums = [2, 4, 6, 8, 10];
+// Can be assigned to a variable
+var even = nums.every(isEven);
+if (even) {
+   console.log("all numbers are even")
+} else {
+   console.log("not all numbers are even")
+}
