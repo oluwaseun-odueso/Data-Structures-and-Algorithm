@@ -37,7 +37,7 @@ nums.sort(compare)
 // forEach ()
 
 function square(num) {
-   console.log (num * num)
+   // console.log (num * num)
 }
 var nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // Cannot be assigned to a variable, doesn't change the original array
@@ -52,7 +52,25 @@ var nums = [2, 4, 6, 8, 10];
 // Can be assigned to a variable
 var even = nums.every(isEven);
 if (even) {
-   console.log("all numbers are even")
+   // console.log("all numbers are even")
 } else {
-   console.log("not all numbers are even")
+   // console.log("not all numbers are even")
 }
+
+// some()
+var nums = [1, 7]
+var someEven = nums.some(isEven);
+if (someEven) {
+   // console.log("some numbers are even")
+} else {
+   // console.log("no numbers are even")
+}
+
+// reduce()
+function add(runningTotal, currentValue) {
+   return runningTotal + currentValue;
+}
+
+var nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+var sum = nums.reduce(add)
+console.log(sum)
