@@ -73,4 +73,16 @@ function add(runningTotal, currentValue) {
 
 var nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 var sum = nums.reduce(add)
-console.log(sum)
+
+// reduce can also be used with strings to perform concatenation
+function concat(accumulatedString, item) {
+   return accumulatedString + item
+}
+
+var words = ['the ', 'quick ', 'brown ', 'fox ', 'ran ']
+var sentence = words.reduce(concat)
+console.log(sentence)
+
+// reduceRight() - same with reduce but works from right to left
+var sentence = words.reduceRight(concat)
+console.log(sentence)
