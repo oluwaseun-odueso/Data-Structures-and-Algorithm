@@ -2,9 +2,9 @@
   "name": "dsa",
   "version": "1.0.0",
   "description": "",
-  "main": "arrays/arrayGeneratingIteratorFunctions.js",
+  "main": "lists/lists.js",
   "scripts": {
-    "start": "nodemon arrays/arrayGeneratingIteratorFunctions.js"
+    "start": "nodemon lists/list.js"
   },
   "author": "Oluwaseun Odueso",
   "license": "ISC",
