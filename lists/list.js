@@ -54,3 +54,31 @@ function length() {
 function toString() {
    return this.dataStore;
 }
+
+// Insert: Inserting an element into a list
+function insert(element, after) {
+   var insertPos = this.find(after);
+   if(insertPos > -1) {
+      this.dataStore.splice(insertPos+1, 0, element);
+      ++this.listSize;
+      return true
+   }
+   return false
+}
+
+// CLear: Removing all elements from a list
+function clear(){
+   delete this.dataStore;
+   this.dataStore = [];
+   this.listSize = this.pos = 0;
+}
+
+// Contains: determining if a given value is in a list
+function contains(element) {
+   for(var i = 0; i < this.dataStore.length; ++i) {
+      if(this.dataStore[i] == element) {
+         return true;
+      }
+   }
+   return false
+}
