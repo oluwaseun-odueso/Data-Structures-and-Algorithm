@@ -19,7 +19,7 @@ function List() {
    this.contains = contains;   
 }
 
-// Append: Adding element to a list
+// Append: Adding element to a list, listSize is incremented by 1
 function append(element) {
    this.dataStore[this.listSize++] = element;
 }
@@ -36,7 +36,7 @@ function find(element) {
 
 // Find: Finding an element in a list
 function remove(element) {
-   var foundAt = this.find(elemnt);
+   var foundAt = this.find(element);
    if(foundAt > -1) {
       this.dataStore.splice(foundAt, 1);
       --this.listSize;
@@ -102,7 +102,7 @@ function next() {
    if (this.pos < this.listSize - 1) {
       ++this.pos;
    }
-}
+}4
 
 function currPos() {
    return this.pos;
@@ -115,3 +115,26 @@ function moveTo(position) {
 function getElement() {
    return this.dataStore[this.pos];
 }
+
+var names = new List();
+names.append("Cynthia")
+names.append('Raymond')
+names.append('Barbara');
+names.append('Clayton')
+names.append('Jennifer')
+names.append('Bryan')
+names.append('Danny')
+// console.log(names.toString())
+// names.remove('Barbara')
+// console.log(names.toString())
+
+names.front();
+console.log(names.getElement())
+
+names.next();
+console.log(names.getElement())
+
+names.next();
+names.next();
+names.prev();
+console.log(names.getElement())
