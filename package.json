@@ -4,7 +4,7 @@
   "description": "",
   "main": "lists/list.js",
   "scripts": {
-    "start": "nodemon stacks/multipleBaseConversion.js"
+    "start": "nodemon stacks/palindromes.js"
   },
   "author": "Oluwaseun Odueso",
   "license": "ISC",
