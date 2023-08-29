@@ -129,12 +129,23 @@ names.append('Danny')
 // console.log(names.toString())
 
 names.front();
-console.log(names.getElement())
+// console.log(names.getElement())
 
 names.next();
-console.log(names.getElement())
+// console.log(names.getElement())
 
 names.next();
 names.next();
 names.prev();
-console.log(names.getElement())
+// console.log(names.getElement())
+
+// ITERATING THROUGH A LIST
+// How to use an interator to traverse through a list
+for(names.front(); names.currPos() < names.length(); names.next()) {
+   // console.log(names.getElement())
+}
+
+// Traverse a list backward
+for(names.end(); names.currPos() >= 0; names.prev()) {
+   console.log(names.getElement());
+}
