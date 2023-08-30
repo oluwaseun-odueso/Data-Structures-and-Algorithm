@@ -4,7 +4,7 @@
   "description": "",
   "main": "lists/list.js",
   "scripts": {
-    "start": "nodemon stacks/postfixExpression.js"
+    "start": "nodemon queues/queue.js"
   },
   "author": "Oluwaseun Odueso",
   "license": "ISC",
