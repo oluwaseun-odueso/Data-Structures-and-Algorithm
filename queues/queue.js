@@ -7,6 +7,7 @@ function Queue () {
    this.back = back;
    this.toString = toString;
    this.empty = empty;
+   this.count = count;
 }
 
 // The enqueue() function adds an element to the end of a queue
@@ -30,9 +31,9 @@ function back () {
 
 // The toString() function displays all the elements in a queue
 function toString () {
-   var returnString = ""
+   var returnString = ''
    for (var i = 0; i < this.dataStore.length; ++i) {
-      returnString += this.dataStore[i] + "\n"
+      returnString += this.dataStore[i] + '\n'
    } return returnString
 }
 
@@ -44,3 +45,18 @@ function empty () {
       return false
    }
 }
+
+function count () {
+   return this.dataStore.length;
+}
+
+var queue1 = new Queue();
+queue1.enqueue('Meredith');
+queue1.enqueue('Cynthia');
+queue1.enqueue('Jennifer')
+// console.log(queue1.toString())
+// console.log(`Front of queue: ${queue1.front()}`)
+// console.log(`Back of queue: ${queue1.back()}`)
+
+
+module.exports = Queue

@@ -4,7 +4,7 @@
   "description": "",
   "main": "lists/list.js",
   "scripts": {
-    "start": "nodemon queues/queue.js"
+    "start": "nodemon queues/assigningPartners.js"
   },
   "author": "Oluwaseun Odueso",
   "license": "ISC",
