@@ -4,7 +4,7 @@
   "description": "",
   "main": "lists/list.js",
   "scripts": {
-    "start": "nodemon queues/priorityQueue.js"
+    "start": "nodemon linkedLists/nodeClass.js"
   },
   "author": "Oluwaseun Odueso",
   "license": "ISC",
