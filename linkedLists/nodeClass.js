@@ -7,7 +7,8 @@ function LinkedList () {
    this.head = new Node("head");
    this.find = find;
    this.insert = insert;
-   // this.remove = remove;
+   this.remove = remove;
+   this.findPrevious = findPrevious;
    this.display = display;
 }
 
@@ -33,9 +34,30 @@ function display () {
    }
 }
 
+// Removing Nodes from a Linked List
+
+function findPrevious (item) {
+   var currNode = this.head;
+   while (!(currNode.next == null) && (currNode.next.element != item)) {
+      currNode = currNode.next;
+   } return currNode;
+}
+
+function remove (item) {
+   var prevNode = this.findPrevious(item);
+   if (!(prevNode.next == null)) {
+      prevNode.next = prevNode.next.next;
+   }
+}
+
+
 // Test program
 var cities = new LinkedList();
-cities.insert('Conway', 'head');
-cities.insert('Russellville', 'Conway');
-cities.insert('Alma', "Russellville")
-cities.display()
+cities.insert("Conway", "head");
+cities.insert("Russellville", "Conway");
+cities.insert("Carlisle", "Russellville");
+cities.insert("Alma", "Carlisle");
+cities.display();
+console.log();
+cities.remove("Carlisle");
+cities.display();
