@@ -4,7 +4,7 @@
   "description": "",
   "main": "lists/list.js",
   "scripts": {
-    "start": "nodemon linkedLists/nodeClass.js"
+    "start": "nodemon linkedLists/doublyLinkedList.js"
   },
   "author": "Oluwaseun Odueso",
   "license": "ISC",
