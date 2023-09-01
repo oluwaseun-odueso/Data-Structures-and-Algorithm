@@ -6,7 +6,7 @@ function Node(element) {
    this.previous = null;
 }
 
-function DoubleList() {
+function DoublyLinkedList() {
    this.head = new Node("head");
    this.find = find;
    this.insert = insert;
@@ -68,7 +68,7 @@ function find(item) {
 }
 
 
-var cities = new DoubleList();
+var cities = new DoublyLinkedList();
 cities.insert("Conway", "head");
 cities.insert("Russellville", "Conway");
 cities.insert("Carlisle", "Russellville");
