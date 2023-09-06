@@ -15,21 +15,21 @@ function genStuData(arr) {
    }
 }
 
-// var numStudents = 10;
-// var arrSize = 97;
-// var idLen = 9;
-// var students = new Array(numStudents);
-// genStuData(students);
-// console.log ("Student data: \n");
-// for (var i = 0; i < students.length; ++i) {
-// console.log(students[i].substring(0,8) + " " +
-// students[i].substring(9));
-// }
-// console.log("\n\nData distribution: \n");
-// var hTable = new HashTable();
-// for (var i = 0; i < students.length; ++i) {
-// hTable.put(students[i]);
-// }
-// hTable.showDistro();
+var numStudents = 10;
+var arrSize = 97;
+var idLen = 9;
+var students = new Array(numStudents);
+genStuData(students);
+console.log ("Student data: \n");
+for (var i = 0; i < students.length; ++i) {
+console.log(students[i].substring(0,8) + " " +
+students[i].substring(9));
+}
+console.log("\n\nData distribution: \n");
+var hTable = new HashTable();
+for (var i = 0; i < students.length; ++i) {
+hTable.put(students[i]);
+}
+hTable.showDistro();
 
 
