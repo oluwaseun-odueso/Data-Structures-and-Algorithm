@@ -5,12 +5,41 @@ function HashTable() {
    this.showDistro = showDistro;
    this.put = put;
    this.get = get;
-   //this.get = get;
+   this.buildChains = buildChains;
 }
 
-function put(key, data) {
+function put (key, data) {
    var pos = this.betterHash(key);
-   this.table[pos] = data;
+   var index = 0;
+   if (this.table[pos][index] == undefined) {
+      this.table[pos][index + 1] = data
+   } else {
+      while (this.table[pos][index] != undefined) {
+         ++index;
+      }
+      this.table[pos][index] != undefined
+   }
+   ++index
+}
+// function put(key, data) {
+//    var pos = this.betterHash(key);
+//    this.table[pos] = data;
+// }
+
+function get(key) {
+   var index = 0;
+   var hash = this.betterHash(key);
+   if (this.table[pos][index] = key) {
+      return this.table[pos][index+1];
+   }
+   else {
+      while (this.table[pos][index] != key) {
+         index += 2;
+      }
+      return this.table[pos][index+1];
+   }
+   index += 2;
+   return undefined;
 }
 
 function simpleHash(data) {
@@ -34,27 +63,26 @@ function betterHash (string, arr) {
    return parseInt(total);
 }
 
-function get (key) {
-   return this.table[this.betterHash(key)]
-}
-
 function showDistro() {
    var n = 0;
    for (var i = 0; i < this.table.length; ++i) {
-      if (this.table[i] != undefined) {
+      if (this.table[i][0] != undefined) {
          console.log(i + ": " + this.table[i]);
       }
    }
 }
 
-var someNames = ["David", "Jennifer", "Donnie", "Raymond",
-"Cynthia", "Mike", "Clayton", "Danny", "Jonathan"];
-
+function buildChains() {
+   for (var i = 0; i < this.table.length; ++i) {
+      this.table[i] = new Array();
+   }
+}
 var hTable = new HashTable();
-
+hTable.buildChains();
+var someNames = ["David", "Jennifer", "Donnie", "Raymond", "Cynthia", "Mike", "Clayton", "Danny", "Jonathan"];
 for (var i = 0; i < someNames.length; ++i) {
    hTable.put(someNames[i]);
 }
-// hTable.showDistro();
+hTable.showDistro();
 
 module.exports = HashTable
