@@ -4,7 +4,7 @@
   "description": "",
   "main": "hash/hash.js",
   "scripts": {
-    "start": "nodemon hash/hash.js"
+    "start": "nodemon hash/integerHash.js"
   },
   "author": "Oluwaseun Odueso",
   "license": "ISC",

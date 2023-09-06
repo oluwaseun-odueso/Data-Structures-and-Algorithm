@@ -4,11 +4,12 @@ function HashTable() {
    this.betterHash = betterHash;
    this.showDistro = showDistro;
    this.put = put;
+   this.get = get;
    //this.get = get;
 }
 
-function put(data) {
-   var pos = this.betterHash(data);
+function put(key, data) {
+   var pos = this.betterHash(key);
    this.table[pos] = data;
 }
 
@@ -33,6 +34,10 @@ function betterHash (string, arr) {
    return parseInt(total);
 }
 
+function get (key) {
+   return this.table[this.betterHash(key)]
+}
+
 function showDistro() {
    var n = 0;
    for (var i = 0; i < this.table.length; ++i) {
@@ -50,4 +55,6 @@ var hTable = new HashTable();
 for (var i = 0; i < someNames.length; ++i) {
    hTable.put(someNames[i]);
 }
-hTable.showDistro();
+// hTable.showDistro();
+
+module.exports = HashTable
