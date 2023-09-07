@@ -4,7 +4,7 @@ function Set() {
    this.remove = remove;
    // this.size = size;
    this.union = union;
-   // this.intersect = intersect;
+   this.intersect = intersect;
    // this.subset = subset;
    // this.difference = difference;
    this.show = show;
@@ -50,6 +50,17 @@ function union(set) {
    return newSet
 }
 
+function intersect(set) {
+   var tempSet = new Set();
+   for (var i = 0; i < this.dataStore.length; ++i) {
+      if (set.contains(this.dataStore[i])) {
+         tempSet.add(this.dataStore[i]);
+      }
+   }
+   return tempSet;
+}
+
+// Test cases for intersection
 var cis = new Set();
 cis.add("Mike");
 cis.add("Clayton");
@@ -58,13 +69,26 @@ cis.add("Raymond");
 var dmp = new Set();
 dmp.add("Raymond");
 dmp.add("Cynthia");
-dmp.add("Jonathan");
-dmp.add("Mike")
-var it = new Set();
-it = cis.union(dmp);
-console.log(it.show());
+dmp.add("Bryan");
+var inter = cis.intersect(dmp);
+console.log(inter.show())
 
+// Test cases for union
+// var cis = new Set();
+// cis.add("Mike");
+// cis.add("Clayton");
+// cis.add("Jennifer");
+// cis.add("Raymond");
+// var dmp = new Set();
+// dmp.add("Raymond");
+// dmp.add("Cynthia");
+// dmp.add("Jonathan");
+// dmp.add("Mike")
+// var it = new Set();
+// it = cis.union(dmp);
+// console.log(it.show());
 
+//Set class test case
 // var names = new Set();
 // names.add("David");
 // names.add("Jennifer");
