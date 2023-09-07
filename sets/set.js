@@ -6,7 +6,7 @@ function Set() {
    this.union = union;
    this.intersect = intersect;
    this.subset = subset;
-   // this.difference = difference;
+   this.difference = difference;
    this.show = show;
    this.contains = contains;
 };
@@ -77,25 +77,48 @@ function subset(set) {
    return true;
 }
 
-// Test case for subset
+function difference(set) {
+   var tempSet = new Set();
+   for (var i = 0; i < this.dataStore.length; ++i) {
+      if (!set.contains(this.dataStore[i])) {
+         tempSet.add(this.dataStore[i]);
+      }
+   }
+   return tempSet;
+}
+
+// Test case for difference
+var cis = new Set();
 var it = new Set();
-it.add("Cynthia");
+cis.add("Clayton");
+cis.add("Jennifer");
+cis.add("Danny");
+it.add("Bryan");
 it.add("Clayton");
 it.add("Jennifer");
-it.add("Danny");
-it.add("Jonathan");
-it.add("Terrill");
-it.add("Raymond");
-it.add("Mike");
-var dmp = new Set();
-dmp.add("Cynthia");
-dmp.add("Raymond");
-dmp.add("Jonathan");
-if (dmp.subset(it)) {
-   console.log("DMP is a subset of IT.");
-} else {
-   console.log("DMP is not a subset of IT.");
-}
+var diff = new Set();
+diff = cis.difference(it);
+console.log(`[${cis.show()}] difference [${it.show()}] -> [${diff.show()}]`);
+
+// Test case for subset
+// var it = new Set();
+// it.add("Cynthia");
+// it.add("Clayton");
+// it.add("Jennifer");
+// it.add("Danny");
+// it.add("Jonathan");
+// it.add("Terrill");
+// it.add("Raymond");
+// it.add("Mike");
+// var dmp = new Set();
+// dmp.add("Cynthia");
+// dmp.add("Raymond");
+// dmp.add("Jonathan");
+// if (dmp.subset(it)) {
+//    console.log("DMP is a subset of IT.");
+// } else {
+//    console.log("DMP is not a subset of IT.");
+// }
 
 
 // Test case for intersection
