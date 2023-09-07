@@ -2,10 +2,10 @@ function Set() {
    this.dataStore = [];
    this.add = add;
    this.remove = remove;
-   // this.size = size;
+   this.size = size;
    this.union = union;
    this.intersect = intersect;
-   // this.subset = subset;
+   this.subset = subset;
    // this.difference = difference;
    this.show = show;
    this.contains = contains;
@@ -24,6 +24,10 @@ function remove(data) {
       this.dataStore.splice(position, 1);
       return true
    } else return false
+};
+
+function size() {
+   return this.dataStore.length;
 };
 
 function show() {
@@ -60,20 +64,54 @@ function intersect(set) {
    return tempSet;
 }
 
-// Test cases for intersection
-var cis = new Set();
-cis.add("Mike");
-cis.add("Clayton");
-cis.add("Jennifer");
-cis.add("Raymond");
-var dmp = new Set();
-dmp.add("Raymond");
-dmp.add("Cynthia");
-dmp.add("Bryan");
-var inter = cis.intersect(dmp);
-console.log(inter.show())
+function subset(set) {
+   if (this.size() > set.size()) {
+      return false;
+   } else {
+      for (var i = 0; i < this.dataStore.length; ++i) {
+         if (!set.contains(i)) {
+            return false;
+         }
+      }
+   }
+   return true;
+}
 
-// Test cases for union
+// Test case for subset
+var it = new Set();
+it.add("Cynthia");
+it.add("Clayton");
+it.add("Jennifer");
+it.add("Danny");
+it.add("Jonathan");
+it.add("Terrill");
+it.add("Raymond");
+it.add("Mike");
+var dmp = new Set();
+dmp.add("Cynthia");
+dmp.add("Raymond");
+dmp.add("Jonathan");
+if (dmp.subset(it)) {
+   console.log("DMP is a subset of IT.");
+} else {
+   console.log("DMP is not a subset of IT.");
+}
+
+
+// Test case for intersection
+// var cis = new Set();
+// cis.add("Mike");
+// cis.add("Clayton");
+// cis.add("Jennifer");
+// cis.add("Raymond");
+// var dmp = new Set();
+// dmp.add("Raymond");
+// dmp.add("Cynthia");
+// dmp.add("Bryan");
+// var inter = cis.intersect(dmp);
+// console.log(inter.show())
+
+// Test case for union
 // var cis = new Set();
 // cis.add("Mike");
 // cis.add("Clayton");
@@ -87,6 +125,7 @@ console.log(inter.show())
 // var it = new Set();
 // it = cis.union(dmp);
 // console.log(it.show());
+
 
 //Set class test case
 // var names = new Set();
