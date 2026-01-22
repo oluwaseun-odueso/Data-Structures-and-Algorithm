@@ -4,7 +4,7 @@
   "description": "",
   "main": "hash/hash.js",
   "scripts": {
-    "start": "nodemon sets/set.js"
+    "start": "nodemon sets/setRelearnt.js"
   },
   "author": "Oluwaseun Odueso",
   "license": "ISC",
