@@ -40,9 +40,10 @@ no integer index you can use to access specific elements of a set
 // MAPS - has set method
 // const myMap = new Map([ ['name', 'John'], ['surname', "Adeola"] ])
 
-const myMap = new Map([ [{}, 'a'], [{}, 'b'] ])
+const myMap = new Map([ [1, 'one'] ])
 
-myMap.set({}, 'c')
+myMap.delete(1)
+// myMap.set({}, 'c')
 
 
 console.log(myMap)
