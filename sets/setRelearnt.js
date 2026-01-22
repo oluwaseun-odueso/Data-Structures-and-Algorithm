@@ -26,4 +26,23 @@ const mySet = new Set(myArray)
 // HAS - it checks if the set has a value
 // console.log(mySet.has(6))
 
-console.log(mySet.size)
+// console.log(mySet.size)
+
+
+
+/* 
+An array is an ordered list of objects, and the elements are accessed using integer indexes.
+A set is an unodered pool of unique elements, and since it is unordered there is 
+no integer index you can use to access specific elements of a set
+*/
+
+
+// MAPS - has set method
+// const myMap = new Map([ ['name', 'John'], ['surname', "Adeola"] ])
+
+const myMap = new Map([ [{}, 'a'], [{}, 'b'] ])
+
+myMap.set({}, 'c')
+
+
+console.log(myMap)
