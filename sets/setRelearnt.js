@@ -12,5 +12,9 @@ const mySet = new Set(myArray)
 // ADD
 // you can add different data types - int, float, bool, string, objects, arrays
 
-mySet.add({ bagName: "Channel"})
+// mySet.add({ bagName: "Channel"})
+// console.log(mySet)
+
+// DELETE
+mySet.delete(3)
 console.log(mySet)
