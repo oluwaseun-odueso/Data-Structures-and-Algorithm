@@ -16,5 +16,9 @@ const mySet = new Set(myArray)
 // console.log(mySet)
 
 // DELETE
-mySet.delete(3)
+// mySet.delete(3)
+// console.log(mySet)
+
+// CLEAR - it accepts no parameters and it clears all the elements of the set
+mySet.clear()
 console.log(mySet)
