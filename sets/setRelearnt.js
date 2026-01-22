@@ -24,4 +24,6 @@ const mySet = new Set(myArray)
 // console.log(mySet)
 
 // HAS - it checks if the set has a value
-console.log(mySet.has(6))
+// console.log(mySet.has(6))
+
+console.log(mySet.size)
