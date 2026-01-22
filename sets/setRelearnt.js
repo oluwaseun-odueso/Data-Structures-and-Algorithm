@@ -20,5 +20,8 @@ const mySet = new Set(myArray)
 // console.log(mySet)
 
 // CLEAR - it accepts no parameters and it clears all the elements of the set
-mySet.clear()
-console.log(mySet)
+// mySet.clear()
+// console.log(mySet)
+
+// HAS - it checks if the set has a value
+console.log(mySet.has(6))
