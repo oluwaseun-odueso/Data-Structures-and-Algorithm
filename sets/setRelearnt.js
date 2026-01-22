@@ -42,8 +42,9 @@ no integer index you can use to access specific elements of a set
 
 const myMap = new Map([ [1, 'one'] ])
 
-myMap.delete(1)
 // myMap.set({}, 'c')
+// myMap.delete(1)
+myMap.clear()
 
 
 console.log(myMap)
